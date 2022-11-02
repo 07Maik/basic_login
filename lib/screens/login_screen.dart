@@ -12,10 +12,17 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [title(), form(), signInSocialMedia()],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              title(),
+              form(),
+              signInSocialMedia(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -95,20 +102,18 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  signInSocialMedia() {
+  Widget signInSocialMedia() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const SocialMediaButton(
+      children: const [
+        SocialMediaButton(
           color: Colors.red,
           iconData: FontAwesomeIcons.googlePlusG,
           text: 'Google',
         ),
-        const SizedBox(
-          width: 20.0,
-        ),
+        SizedBox(width: 20.0),
         SocialMediaButton(
-          color: Colors.blue[900]!,
+          color: Colors.indigo,
           iconData: FontAwesomeIcons.facebookF,
           text: 'Google',
         )
