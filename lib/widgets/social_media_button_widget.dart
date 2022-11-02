@@ -14,26 +14,35 @@ class SocialMediaButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 150,
-      height: 45,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25.0),
-          border: Border.all(color: color, width: 1.5)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FaIcon(
-           iconData,
+    return OutlinedButton(
+      onPressed: () {},
+      style: OutlinedButton.styleFrom(
+          foregroundColor: color,
+          side: BorderSide(
             color: color,
+            width: 1.5,
           ),
-          const SizedBox(width: 5.0),
-          Text(
-            text,
-            style: TextStyle(
-                fontSize: 17, color: color, fontWeight: FontWeight.bold),
-          ),
-        ],
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+          )),
+      child: SizedBox(
+        width: 150,
+        height: 45,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FaIcon(
+              iconData,
+              color: color,
+            ),
+            const SizedBox(width: 5.0),
+            Text(
+              text,
+              style: TextStyle(
+                  fontSize: 17, color: color, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }

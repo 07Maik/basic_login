@@ -65,10 +65,10 @@ class LoginScreen extends StatelessWidget {
         ),
         SizedBox(height: 20.0),
         CustomInput(
-          label: 'Password',
-          hint: '******',
-          textInputType: TextInputType.visiblePassword,
-        ),
+            label: 'Password',
+            hint: '******',
+            textInputType: TextInputType.visiblePassword,
+            isPassword: true),
       ]),
     );
 

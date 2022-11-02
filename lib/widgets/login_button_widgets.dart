@@ -9,24 +9,30 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: (() {}),
+    return OutlinedButton(
+      onPressed: () {},
+      style: OutlinedButton.styleFrom(
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.yellow,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.horizontal(left: Radius.circular(30)),
+          )),
       child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 40.0),
           alignment: Alignment.center,
           width: 200,
           height: 60.0,
-          decoration: const BoxDecoration(
-              color: Colors.yellow,
-              borderRadius: BorderRadius.horizontal(left: Radius.circular(30))),
           child: Row(
             children: const [
               Text(
                 'SIGN IN',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.black),
               ),
               Spacer(),
-              Icon(FontAwesomeIcons.arrowRight)
+              Icon(FontAwesomeIcons.arrowRight, color: Colors.black)
             ],
           )),
     );
