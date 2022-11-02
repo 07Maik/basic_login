@@ -25,7 +25,7 @@ class CustomInput extends StatelessWidget {
         ),
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return "El campo no puede ser vacio";
+            return "El campo es obligatorio";
           }
         });
   }

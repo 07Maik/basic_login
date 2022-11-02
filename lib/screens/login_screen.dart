@@ -1,7 +1,9 @@
-import 'package:basic_login/widgets/social_media_button_widget.dart';
 import 'package:flutter/material.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'
     show FontAwesomeIcons;
+
+import 'package:basic_login/widgets/social_media_button_widget.dart';
 
 import '../widgets/custom_input_widget.dart';
 import '../widgets/login_button_widgets.dart';
@@ -19,7 +21,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               title(),
               form(),
-              signInSocialMedia(),
+              loginButtonsSocialMedia(),
             ],
           ),
         ),
@@ -102,7 +104,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget signInSocialMedia() {
+  Widget loginButtonsSocialMedia() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: const [
