@@ -1,6 +1,6 @@
 # basic_login
 
-Basic login view
+View, Basic login
 
 <img src="./screenshot/challenge achieved.png">
 
